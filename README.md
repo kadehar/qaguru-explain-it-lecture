@@ -1,5 +1,7 @@
 # qaguru-explain-it-lecture
 
+Репозиторий с начала урока: https://github.com/kadehar/rest-assured-demowebshop
+
 ## Полезные ссылки
 
 - Draw.io - https://app.diagrams.net/
