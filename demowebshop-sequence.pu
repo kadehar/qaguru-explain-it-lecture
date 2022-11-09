@@ -1,0 +1,32 @@
+@startuml
+actor User as User
+participant UI as UI
+participant Server as Server
+
+User --> UI: Нажимает кнопку Register
+activate UI
+UI --> Server: GET https://demowebshop.tricentis.com/register
+deactivate UI
+activate Server
+Server --> UI: Форма регистрации
+deactivate Server
+activate UI
+UI --> User: Форма регистрации
+deactivate UI
+User --> UI: Заполняет форму и \nнажимет кнопку Register
+activate UI
+UI --> Server: POST https://demowebshop.tricentis.com/register
+deactivate UI
+activate Server
+Server --> UI: HTTP 302 Redirect
+deactivate Server
+activate UI
+UI --> Server: GET https://demowebshop.tricentis.com/registerresult/1
+deactivate UI
+activate Server
+Server --> UI: Страница подтверждения регистрации
+deactivate Server
+activate UI
+UI --> User: Страница подтверждения регистрации
+deactivate UI
+@enduml
